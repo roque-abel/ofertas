@@ -1,7 +1,8 @@
-package com.ofertas.repository.repository;
+package com.ofertas.infrastructure.repository;
 
-import com.ofertas.repository.entity.ContratoOfertaEntity;
+import com.ofertas.infrastructure.entity.ContratoOfertaEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ContratoOfertaReporsitory extends JpaRepository<ContratoOfertaEntity,Integer> {
+
 }

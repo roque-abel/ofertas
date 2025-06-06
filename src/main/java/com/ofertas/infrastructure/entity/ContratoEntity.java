@@ -1,10 +1,11 @@
-package com.ofertas.repository.entity;
+package com.ofertas.infrastructure.entity;
 
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Data;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @Builder
