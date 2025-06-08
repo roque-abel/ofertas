@@ -17,10 +17,11 @@ public class DaoRepositoryOferta implements OfertaRepositoryCrud {
     private final OfertaRepository ofertaRepository;
     private final Mapeo mapeo;
 
-    public List<OfertaDto> buscarOfertas(){
+    public OfertaDto buscarOfertas(Integer mesAsignado){
         LocalDate primeraFecha= LocalDate.now();
-        LocalDate segundaFecha = LocalDate.now().plusDays(90);
-        List<OfertaEntity> ofertasEntity = ofertaRepository.findByFechaInicioBetween(primeraFecha,segundaFecha);
-      return   this.mapeo.ofertaEntityToDto(ofertasEntity);
+        LocalDate segundaFecha = LocalDate.now().plusDays(mesAsignado);
+        OfertaEntity ofertaEntity = ofertaRepository.findFirstByFechaInicioBetweenOrderByIdAsc(primeraFecha,segundaFecha);
+
+      return   this.mapeo.ofertaEntityToDto(ofertaEntity);
     }
 }

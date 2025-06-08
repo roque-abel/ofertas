@@ -7,5 +7,5 @@ import java.time.LocalDate;
 import java.util.List;
 
 public interface OfertaRepository extends JpaRepository<OfertaEntity, Integer> {
-    List<OfertaEntity> findByFechaInicioBetween(LocalDate fechaPrimera, LocalDate fechaSegunda);
+    OfertaEntity findFirstByFechaInicioBetweenOrderByIdAsc(LocalDate fechaPrimera, LocalDate fechaSegunda);
 }
