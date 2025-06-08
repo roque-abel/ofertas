@@ -18,8 +18,8 @@ public class DaoRepositoryContrato implements ContratoRepositoryCrud {
     private Mapeo mapeo;
 
     @Override
-    public List<ContratoDto> buscarContratosPorPersona(Integer idPersonas) {
-        List<ContratoEntity> contratosPorPersona = this.contratoRepository.findByidPersona(idPersonas);
+    public List<ContratoDto> buscarContratosPorPersona(Integer idPersona) {
+        List<ContratoEntity> contratosPorPersona = this.contratoRepository.findByIdPersona(idPersona);
         return this.mapeo.listContratoEntityToDto(contratosPorPersona);
     }
 }

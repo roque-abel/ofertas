@@ -1,12 +1,16 @@
 package com.ofertas.infrastructure.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "cat-perfiles")
 public class CatPerfilEntity {
     @Id

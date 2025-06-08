@@ -15,6 +15,8 @@ public class DaoRepositoryPerfil implements CatPerfilRepositoryCrud {
     private final Mapeo mapeo;
 
     public CatPerfilDto buscarTipoDePerfil(String tipoDePerfil){
+        System.out.println("tipo de perfil" + tipoDePerfil);
+
         CatPerfilEntity perfil = this.perfilRepository.findByTipoDePerfil(tipoDePerfil);
         return this.mapeo.catPerfilEntityToDo(perfil);
     }

@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface OfertaRepositoryCrud {
 
-    List<OfertaDto> buscarOfertas();
+    OfertaDto buscarOfertas(Integer mesAsignado);
 }

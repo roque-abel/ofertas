@@ -17,19 +17,13 @@ public class PropertiesValues {
     @Value("${perfil.malo}")
     private String malo;
 
-    @Value("${perfil.bueno")
+    @Value("${perfil.bueno}")
     private String bueno;
 
-    @Value("${perfil.excelente")
+    @Value("${perfil.excelente}")
     private String excelente;
 
-    @Value("${perfil.plus")
+    @Value("${perfil.plus}")
     private String plus;
 
-    public PropertiesValues(String malo, String bueno, String excelente, String plus) {
-        this.malo = malo;
-        this.bueno = bueno;
-        this.excelente = excelente;
-        this.plus = plus;
-    }
 }
